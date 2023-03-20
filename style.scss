@@ -1,0 +1,48 @@
+$bgcolor: red;
+$textcolor: teal;
+$fontsize: 20px;
+
+
+
+@mixin border($width, $border-color)
+{
+    border: $width solid $border-color;
+}
+
+@mixin important-text{
+    color: blue;
+    font-size: 30px;
+    font-weight: bold;
+    border: 5px solid black;
+}
+
+p{
+    @include border(5px, red);
+    background-color: aquamarine;
+}
+
+@function Fonts($FontS)
+{
+    @return $FontS * 2;
+}
+
+@mixin border($width:3px, $border-color:lightblue
+)
+{
+    border: $width solid $border-color;
+}
+
+@function textStyle($bgColor){
+
+    @if (Lightness($bgColor) <50)
+    {
+        @return black;}
+    @else{
+        @return white;
+    }
+}
+
+
+
+
+    
